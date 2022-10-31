@@ -5,7 +5,13 @@
 @layer base {
   body {
     @apply bg-white;
-    @apply min-h-full;
+    @apply m-0;
+  }
+  #__next {
+    @apply bg-white;
+    @apply min-h-screen;
+    @apply flex;
+    @apply flex-col;
   }
   h1 {
     @apply text-2xl;

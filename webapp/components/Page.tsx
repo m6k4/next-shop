@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Footer from './Footer';
 import NavBar from './NavBar';
-import Title from './Title';
 
 type Props = {
   title: string,
@@ -16,12 +15,10 @@ const Page = ({ title, children }: Props) => {
       </Head>
       <header>
         <NavBar />
-        <h1 className="my-20"> HEDER </h1> TEST
       </header>
-      <main className='px-6 py-16'>
-          <Title>{title}</Title>
-          {children}
-      </main>
+      <section className="pt-14 flex-1">
+        {children}
+      </section>
       <Footer />
     </>
   )

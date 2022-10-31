@@ -3,7 +3,7 @@ import Logo from "./common/Logo"
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col p-4 bg-slate-100 h-60">
+    <footer className="flex flex-col p-4 bg-stone-200 h-60">
       <div className="sm:flex sm:items-center sm:justify-between flex justify-between items-center">
         <Logo />
         <ul className="flex gap-8 items-center mb-6 text-m text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
       <section className="flex justify-center mt-auto">
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          &copy; 2022 Plantarium. All rights reserved.
+          &copy; 2022 Plantarium. All rights reserved. All images are from www.thesill.com
         </p>
        </section>
     </footer>

@@ -1,3 +1,4 @@
+import TitleSection from '../components/homepage/TitleSection';
 import Page from '../components/Page';
 import ProductCard from '../components/ProductCard';
 import { getProducts } from '../lib/products';
@@ -18,13 +19,16 @@ type Props = {
 const HomePage = ({ products }: Props) => {
   return (
    <Page title="Plants">
-      <ul className='flex mb-4 gap-2 flex-wrap justify-start'>
+    <TitleSection />
+    <div className="flex justify-center px-32 mt-8">
+      <ul className='flex mb-4 gap-2 flex-wrap'>
        {products.map((product) => (
          <li key={product.id}>
            <ProductCard product={product} />
          </li>
         ))}
       </ul>
+    </div>
    </Page>
   )
 }

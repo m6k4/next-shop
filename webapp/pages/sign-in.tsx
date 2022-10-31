@@ -24,8 +24,8 @@ const SignInPage = () => {
   
   return (
     <Page title="Sign In">
-      <div className="flex justify-center">
-        <div className="p-6 w-96 bg-white rounded-lg border border-gray-200 shadow-md transition duration-200 ease-out hover:shadow-lg">
+      <div className="flex justify-center h-full py-16">
+        <div className="p-6 w-96 bg-white rounded-lg border border-gray-200 shadow-md transition duration-200 ease-out hover:shadow-lg h-64">
           <form onSubmit={handleSubmit}>
             <FormField label="email">
               <Input
