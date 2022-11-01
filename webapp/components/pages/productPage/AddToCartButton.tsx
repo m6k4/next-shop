@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { useAddToCart } from "../../hooks/cart";
-import CounterInput from "../common/CounterInput";
+import { useAddToCart } from "../../../hooks/cart";
+import CounterInput from "./CounterInput";
 
 const AddToCartButton = ({ product }) => {
   const { addToCart, addToCartLoading, addToCartError }= useAddToCart();
@@ -12,7 +12,7 @@ const AddToCartButton = ({ product }) => {
         <CounterInput value={quantity} setValue={setQuantity} />
         <button
           disabled={addToCartLoading}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          className="bg-green-600 hover:bg-green-900 text-white font-bold py-2 px-4 rounded"
           onClick={() => addToCart(product.id, quantity)}
         >
           Add to cart

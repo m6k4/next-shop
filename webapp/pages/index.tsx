@@ -1,6 +1,6 @@
-import TitleSection from '../components/homepage/TitleSection';
 import Page from '../components/Page';
 import ProductCard from '../components/ProductCard';
+import TitleSection from '../components/pages/homepage/TitleSection';
 import { getProducts } from '../lib/products';
 import { Product } from '../types';
 
