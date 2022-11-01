@@ -4,7 +4,7 @@ import { ApiError } from '../../lib/api';
 import Page from "../../components/Page";
 import { Product } from '../../types';
 import { useUser } from '../../hooks/user';
-import AddToCartButton from '../../components/ShoppingCart/AddToCartButton';
+import AddToCartButton from '../../components/pages/productPage/AddToCartButton';
 
 export const getStaticPaths = async () => {
   const products = await getProducts();

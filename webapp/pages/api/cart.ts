@@ -61,6 +61,26 @@ const handlePostCart = async (req: NextApiRequest, res: NextApiResponse): Promis
   }
 };
 
+const handleDeleteCart = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
+  const jwt = req.cookies.jwt;
+  if( !jwt ) {
+    res.status(401).end();
+    return;
+  }
+  const { productId } = req.body;
+  try {
+    await fetchJson(`${CMS_URL}/cart-items/${productId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+      },
+    });
+    res.status(200).json({});
+  } catch (error) {
+    res.status(401).end();
+  }
+};
+
 const handleCart = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   switch (req.method) {
     case "GET":
@@ -68,6 +88,9 @@ const handleCart = async (req: NextApiRequest, res: NextApiResponse): Promise<vo
       break;
     case "POST":
       await handlePostCart(req, res);
+      break;
+    case "DELETE":
+      await handleDeleteCart(req, res);
       break;
     default:
       res.status(405).end();
