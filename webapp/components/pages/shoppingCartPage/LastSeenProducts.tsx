@@ -3,6 +3,7 @@ const LastSeenProducts = () => {
 
   return (
     <div>
+      TEST
       {/* {lastSeenProducts.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))} */}

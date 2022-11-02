@@ -1,9 +1,11 @@
 import { useCart } from "../../../../../hooks/cart";
-import Button from "../../../../common/Button";
+import { useCheckout } from "../../../../../hooks/checkout";
 import OrderSummaryItem from "./OrderSummaryItem";
 
 const OrderSummary = () => {
   const { cartItems, cartTotal } = useCart();
+  const { checkout, checkoutLoading, checkoutError } = useCheckout();
+
   const shippingPrice = 10;
 
   return (
@@ -33,9 +35,16 @@ const OrderSummary = () => {
         </span>
       </div>
       <div className="mt-auto w-full">
-        <Button type="submit">
-          Checkout
-        </Button>
+        <button
+          disabled={checkoutLoading}
+          className="bg-green-700 hover:bg-green-900 text-white w-full rounded-lg font-bold py-2 px-4"
+          onClick={() => checkout({cartItems, shipment: shippingPrice})}
+        >
+          {checkoutLoading ? <p>loading...</p> : <p>Checkout</p>}
+        </button>
+        <span>
+          {checkoutError && <p>Checkout error...</p>}
+        </span>
       </div>
     </div>
   );

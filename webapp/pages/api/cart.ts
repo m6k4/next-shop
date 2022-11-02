@@ -5,7 +5,6 @@ import { Cart } from "../../types";
 const { CMS_URL } = process.env;
 
 const stripCart = (cart: any): Cart => {
-  console.log(cart), 'cart -response';
   return {
     id: cart.id,
     product: {
