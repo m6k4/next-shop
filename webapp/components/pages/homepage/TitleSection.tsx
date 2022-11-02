@@ -9,7 +9,7 @@ const Header = () => {
           <p className="text-xl font-thin text-gray-600">A place to share your plants</p>
         </div>
         <div className="justify-center pt-8 invisible sm:visible">
-          <Image src="/monstera.jpg" alt="logo" width={450} height={350} />
+          <Image src="/monstera.jpg" alt="logo" width={450} height={350} priority/>
         </div>
       </div>
     </div>

@@ -38,8 +38,8 @@ const handlePostCheckout = async (req: NextApiRequest, res: NextApiResponse): Pr
       }),
       
       mode: 'payment',
-      success_url: 'http://localhost:3000/success',
-      cancel_url: 'http://localhost:300/error',
+      success_url: 'http://localhost:3000/checkout/success',
+      cancel_url: 'http://localhost:300/checkout/error',
     });
     res.status(200).json({ id: session.id });
   } catch (error) {
