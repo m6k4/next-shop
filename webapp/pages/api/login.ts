@@ -1,6 +1,6 @@
 import cookie from "cookie";
 import { NextApiRequest, NextApiResponse } from "next";
-import { fetchJson } from "../../lib/api";
+import { fetchJson } from "lib/api";
 
 const { CMS_URL } = process.env;
 

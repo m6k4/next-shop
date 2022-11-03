@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {VscChromeClose} from "react-icons/vsc";
 
-import { useRemoveFromCart } from  "../../../../hooks/cart";
+import { useRemoveFromCart } from  "hooks/cart";
 
 const CartDetailsSingleItem = ({ item }) => {
   const { removeFromCart } = useRemoveFromCart();

@@ -1,4 +1,4 @@
-import { Product } from '../types';
+import { Product } from 'types';
 import { fetchJson } from './api';
 
 const { CMS_URL } = process.env;

@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "react-query";
 import { loadStripe } from '@stripe/stripe-js';
-import { fetchJson } from "../lib/api";
-import { Cart } from "../types";
+import { fetchJson } from "lib/api";
+import { Cart } from "types";
 
 
 const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;

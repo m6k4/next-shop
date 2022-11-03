@@ -1,4 +1,4 @@
-import { CheckoutResultCard, CheckoutResult} from "../../components/pages/checkout/CheckoutResultCard";
+import { CheckoutResultCard, CheckoutResult} from "components/pages/checkout/CheckoutResultCard";
 
 const SuccessPage = () => {
   return (

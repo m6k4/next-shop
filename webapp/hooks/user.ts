@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "react-query";
-import { fetchJson } from "../lib/api";
-import { User } from "../types";
+import { fetchJson } from "lib/api";
+import { User } from "types";
 
 type LoginMutationParams = {
   email: string;

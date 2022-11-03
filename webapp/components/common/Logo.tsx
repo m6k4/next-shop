@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { RiPlantLine } from "react-icons/ri";
 
 const Logo = () => {

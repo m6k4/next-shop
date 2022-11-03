@@ -1,8 +1,8 @@
-import Page from '../components/Page';
-import ProductCard from '../components/ProductCard';
-import TitleSection from '../components/pages/homepage/TitleSection';
-import { getProducts } from '../lib/products';
-import { Product } from '../types';
+import Page from 'components/Page';
+import ProductCard from 'components/ProductCard';
+import TitleSection from 'components/pages/homepage/TitleSection';
+import { getProducts } from 'lib/products';
+import { Product } from 'types';
 
 export async function getStaticProps() {
   const products: Product[] = await getProducts();

@@ -1,5 +1,5 @@
-import { useCart } from "../../../../../hooks/cart";
-import { useCheckout } from "../../../../../hooks/checkout";
+import { useCart } from "hooks/cart";
+import { useCheckout } from "hooks/checkout";
 import OrderSummaryItem from "./OrderSummaryItem";
 
 const OrderSummary = () => {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useUser, useLogout } from "../hooks/user";
+import { useUser, useLogout } from "hooks/user";
 
 const NavBar = () => {
   const user = useUser();

@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useAddToCart } from "../../../hooks/cart";
+import { useAddToCart } from "hooks/cart";
 import CounterInput from "./CounterInput";
 
 const AddToCartButton = ({ product }) => {

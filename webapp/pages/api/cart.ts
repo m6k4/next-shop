@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { fetchJson } from "../../lib/api";
-import { Cart } from "../../types";
+import { fetchJson } from "lib/api";
+import { Cart } from "types";
 
 const { CMS_URL } = process.env;
 

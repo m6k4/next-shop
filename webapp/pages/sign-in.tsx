@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { useRouter } from "next/router";
-import Button from "../components/common/Button";
-import FormField from "../components/common/FormField";
-import Input from "../components/common/Input";
-import Page from "../components/Page";
-import { useLogin } from "../hooks/user";
+import Button from "components/common/Button";
+import FormField from "components/common/FormField";
+import Input from "components/common/Input";
+import Page from "components/Page";
+import { useLogin } from "hooks/user";
 
 
 const SignInPage = () => {

@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { getProducts, getProduct } from "../../lib/products";
-import { ApiError } from '../../lib/api';
-import Page from "../../components/Page";
-import { Product } from '../../types';
-import { useUser } from '../../hooks/user';
-import AddToCartButton from '../../components/pages/productPage/AddToCartButton';
+import { getProducts, getProduct } from "lib/products";
+import { ApiError } from 'lib/api';
+import Page from "components/Page";
+import { Product } from 'types';
+import { useUser } from 'hooks/user';
+import AddToCartButton from 'components/pages/productPage/AddToCartButton';
 
 export const getStaticPaths = async () => {
   const products = await getProducts();

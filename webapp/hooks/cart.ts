@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "react-query";
-import { fetchJson } from "../lib/api";
-import { Cart } from "../types";
+import { fetchJson } from "lib/api";
+import { Cart } from "types";
 
 type AddToCartParams = {
   productId: number;

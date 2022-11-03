@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { fetchJson } from "../../lib/api";
-import { User } from "../../types";
+import { fetchJson } from "lib/api";
+import { User } from "types";
 
 const { CMS_URL } = process.env;
 

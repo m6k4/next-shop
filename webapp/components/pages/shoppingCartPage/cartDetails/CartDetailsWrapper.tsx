@@ -1,4 +1,4 @@
-import { Cart } from "../../../../types";
+import { Cart } from "types";
 // import Image from 'next/image';
 import CartDetailsSingleItem from "./CartDetailsSingleItem";
 import EmptyCart from "./EmptyCart";
