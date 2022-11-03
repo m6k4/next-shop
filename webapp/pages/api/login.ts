@@ -2,7 +2,7 @@ import cookie from "cookie";
 import { NextApiRequest, NextApiResponse } from "next";
 import { fetchJson } from "lib/api";
 
-const { CMS_URL } = process.env;
+const { NEXT_PUBLIC } = process.env;
 
 const handlerLogin = async (req: NextApiRequest, res: NextApiResponse) => {
   if( req.method !== 'POST' ) {
@@ -11,7 +11,7 @@ const handlerLogin = async (req: NextApiRequest, res: NextApiResponse) => {
   }
   const { email, password } = req.body;
   try {
-    const { jwt, user } = await fetchJson(`${CMS_URL}/auth/local`, {
+    const { jwt, user } = await fetchJson(`${NEXT_PUBLIC}/auth/local`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { fetchJson } from "lib/api";
 import { User } from "types";
 
-const { CMS_URL } = process.env;
+const { NEXT_PUBLIC } = process.env;
 
 const handlerUser = async (req: NextApiRequest, res: NextApiResponse): Promise<User> => {
   const jwt = req.cookies.jwt;
@@ -11,7 +11,7 @@ const handlerUser = async (req: NextApiRequest, res: NextApiResponse): Promise<U
     return;
   }
   try {
-    const user = await fetchJson(`${CMS_URL}/users/me`, {
+    const user = await fetchJson(`${NEXT_PUBLIC}/users/me`, {
       headers: {
         Authorization: `Bearer ${jwt}`,
       },
