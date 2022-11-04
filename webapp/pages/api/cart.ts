@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { fetchJson } from "lib/api";
 import { Cart } from "types";
 
-const { NEXT_PUBLIC } = process.env;
+const { NEXT_PUBLIC_CMS_URL } = process.env;
 
 const stripCart = (cart: any): Cart => {
   return {
@@ -11,7 +11,7 @@ const stripCart = (cart: any): Cart => {
       id: cart.product.id,
       title: cart.product.title,
       price: cart.product.price,
-      pictureUrl: NEXT_PUBLIC + cart.product.picture.url,
+      pictureUrl: NEXT_PUBLIC_CMS_URL + cart.product.picture.url,
     },
     quantity: cart.quantity,
   };
@@ -24,7 +24,7 @@ const handleGetCart = async (req: NextApiRequest, res: NextApiResponse): Promise
     return;
   }
   try {
-    const cart = await fetchJson(`${NEXT_PUBLIC}/cart-items`, {
+    const cart = await fetchJson(`${NEXT_PUBLIC_CMS_URL}/cart-items`, {
       headers: {
         Authorization: `Bearer ${jwt}`,
       },
@@ -43,7 +43,7 @@ const handlePostCart = async (req: NextApiRequest, res: NextApiResponse): Promis
   }
   const { productId, quantity } = req.body;
   try {
-    const cart = await fetchJson(`${NEXT_PUBLIC}/cart-items`, {
+    const cart = await fetchJson(`${NEXT_PUBLIC_CMS_URL}/cart-items`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -68,7 +68,7 @@ const handleDeleteCart = async (req: NextApiRequest, res: NextApiResponse): Prom
   }
   const { productId } = req.body;
   try {
-    await fetchJson(`${NEXT_PUBLIC}/cart-items/${productId}`, {
+    await fetchJson(`${NEXT_PUBLIC_CMS_URL}/cart-items/${productId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${jwt}`,
