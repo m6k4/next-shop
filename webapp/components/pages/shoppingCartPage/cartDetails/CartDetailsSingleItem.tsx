@@ -7,7 +7,7 @@ const CartDetailsSingleItem = ({ item }) => {
   const { removeFromCart } = useRemoveFromCart();
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 my-8">
+    <div className="flex flex-row gap-4 my-8">
       <div className="w-full md:w-1/4">
         <Image src={item.product.pictureUrl} alt={item.product.title} width={120} height={80} />
       </div>

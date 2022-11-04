@@ -1,5 +1,7 @@
 # Next.js + Strapi shop
 
+Demo: [https://next-shop-m6k4.vercel.app/](https://next-shop-m6k4.vercel.app/)
+
 ## Getting Started
 
 Run the development server for webapp

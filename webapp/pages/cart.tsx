@@ -4,7 +4,6 @@ import CartDetailsWrapper from "components/pages/shoppingCartPage/cartDetails/Ca
 
 const CartPage = () => {
   const { cartItems } = useCart();
-  console.log(cartItems);
   
   return (
     <Page title="Cart">

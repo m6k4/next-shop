@@ -9,7 +9,7 @@ const OrderSummary = () => {
   const shippingPrice = 10;
 
   return (
-    <div className="bg-stone-100 w-full rounded-lg p-8 h-2/3 flex flex-col">
+    <div className="bg-stone-100 w-full rounded-lg p-8 flex flex-col h-96">
       <h2>Order Summary</h2>
       <div className="mt-8">
         {cartItems.map((item) => (

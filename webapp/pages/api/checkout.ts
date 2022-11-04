@@ -2,6 +2,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Stripe from "stripe";
 import { Cart } from "types";
 
+const { APP_URL } = process.env;
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2022-08-01",
 });
@@ -38,8 +40,8 @@ const handlePostCheckout = async (req: NextApiRequest, res: NextApiResponse): Pr
       }),
       
       mode: 'payment',
-      success_url: 'http://localhost:3000/checkout/success',
-      cancel_url: 'http://localhost:300/checkout/error',
+      success_url: `${APP_URL}/checkout/success`,
+      cancel_url: `${APP_URL}/checkout/error`,
     });
     res.status(200).json({ id: session.id });
   } catch (error) {
