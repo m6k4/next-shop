@@ -11,7 +11,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'immense-island-34163.herokuapp.com',
-        port: '',
         pathname: '/uploads/**',
       },
       {
