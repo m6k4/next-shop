@@ -16,7 +16,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '**.vercel.app',
-        pathname: '/_next/**',
+        pathname: '/**',
       },
       {
         protocol: 'http',
