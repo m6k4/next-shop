@@ -15,7 +15,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'https:/next-shop-black.vercel.app',
+        hostname: 'next-shop-black.vercel.app',
         pathname: '/_next/**',
       },
       {
