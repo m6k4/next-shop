@@ -14,6 +14,11 @@ const nextConfig = {
         pathname: '/uploads/**',
       },
       {
+        protocol: 'https',
+        hostname: 'https:/next-shop-black.vercel.app',
+        pathname: '/_next/**',
+      },
+      {
         protocol: 'http',
         hostname: 'localhost',
         port: '1337',
